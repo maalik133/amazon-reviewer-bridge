@@ -1,132 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rhode Rewards</title>
 
-<title>Amazon Product Reviewer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
+    body {
+      background: #f3f1ec;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #4f4e4a;
+      padding: 0 14px 28px;
+    }
 
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#0b0016;
-color:white;
-display:flex;
-justify-content:center;
-padding:30px;
-}
+    .top-strip {
+      width: calc(100% + 28px);
+      margin-left: -14px;
+      background: #e8e6e0;
+      color: #66645f;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      padding: 12px 14px;
+      border-radius: 0 0 8px 8px;
+      text-transform: uppercase;
+    }
 
-.container{
-max-width:420px;
-width:100%;
-}
+    .brand-wrap {
+      width: calc(100% + 28px);
+      margin-left: -14px;
+      background: #f3f1ec;
+      padding: 24px 0 26px;
+      text-align: center;
+    }
 
-.logo{
-background:linear-gradient(135deg,#7a2cff,#a855ff);
-padding:40px;
-border-radius:14px;
-text-align:center;
-font-size:32px;
-font-weight:bold;
-margin-bottom:25px;
-}
+    .brand {
+      font-size: 46px;
+      font-weight: 800;
+      letter-spacing: -3px;
+      line-height: 0.95;
+      color: #62615d;
+      text-transform: lowercase;
+    }
 
-.subtitle{
-text-align:center;
-font-size:18px;
-margin-bottom:25px;
-}
+    .container {
+      width: 100%;
+      max-width: 530px;
+      margin: 0 auto;
+      background: #faf8f3;
+      border: 1px solid #d8d4ca;
+      border-radius: 16px;
+      padding: 24px 18px 30px;
+      box-shadow: 0 10px 28px rgba(80, 78, 70, 0.10);
+      overflow: hidden;
+    }
 
-.highlight{
-color:#b57cff;
-font-weight:bold;
-}
+    h1 {
+      font-size: 24px;
+      line-height: 1.15;
+      text-align: center;
+      margin-bottom: 14px;
+      font-weight: 800;
+      color: #111;
+      white-space: nowrap;
+      letter-spacing: -0.8px;
+    }
 
-.card{
-background:#140025;
-padding:20px;
-border-radius:12px;
-margin-bottom:20px;
-border:1px solid rgba(255,255,255,0.08);
-}
+    .badge {
+      width: fit-content;
+      margin: 0 auto 18px;
+      background: #6b6861;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 999px;
+      font-size: 21px;
+      font-weight: 800;
+      box-shadow: 0 8px 18px rgba(80, 78, 70, 0.22);
+    }
 
-.card h3{
-margin-top:0;
-margin-bottom:15px;
-}
+    .subtext {
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.45;
+      color: #4f4e4a;
+      margin-bottom: 24px;
+    }
 
-.check{
-color:#a855ff;
-margin-right:8px;
-}
+    .step {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      background: #fffdf8;
+      border: 1px solid #d8d4ca;
+      border-radius: 12px;
+      padding: 18px 16px;
+      margin-bottom: 16px;
+      width: 100%;
+    }
 
-.cta{
-display:block;
-text-align:center;
-background:linear-gradient(135deg,#8b3cff,#b06bff);
-padding:18px;
-border-radius:12px;
-text-decoration:none;
-color:white;
-font-weight:bold;
-font-size:18px;
-margin-top:15px;
-}
+    .icon {
+      min-width: 36px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #5f5d58;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 900;
+      margin-top: 0;
+    }
 
-.small{
-color:#b3a6c9;
-font-size:14px;
-}
+    .step-text {
+      width: 100%;
+    }
 
-</style>
+    .step h3 {
+      font-size: 20px;
+      margin-bottom: 0;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #111;
+    }
+
+    .cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: #5f5d58;
+      color: white;
+      text-decoration: none;
+      padding: 21px 14px;
+      border-radius: 9px;
+      font-size: 21px;
+      font-weight: 900;
+      margin-top: 8px;
+      box-shadow: 0 12px 26px rgba(80, 78, 70, 0.26);
+      transition: background-color 0.18s ease, transform 0.18s ease;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    .cta:hover {
+      background: #8b735d;
+      transform: translateY(-1px);
+    }
+
+    .cta:active {
+      background: #8b735d;
+      transform: scale(0.985);
+    }
+
+    .fine-print {
+      text-align: center;
+      font-size: 14px;
+      color: #77736b;
+      margin: 16px 0 32px;
+      line-height: 1.4;
+    }
+
+    h2 {
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 18px;
+      font-weight: 900;
+      color: #111;
+    }
+
+    details {
+      background: #fffdf8;
+      border: 1px solid #d8d4ca;
+      border-radius: 10px;
+      padding: 18px 14px;
+      margin-bottom: 12px;
+      width: 100%;
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 800;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      line-height: 1.35;
+      color: #111;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      font-size: 26px;
+      font-weight: 900;
+      flex-shrink: 0;
+      color: #5f5d58;
+    }
+
+    details[open] summary::after {
+      content: "-";
+      color: #8b735d;
+    }
+
+    details p {
+      margin-top: 18px;
+      font-size: 16px;
+      line-height: 1.45;
+      color: #4f4e4a;
+    }
+
+    @media (max-width: 520px) {
+      .brand {
+        font-size: 42px;
+        letter-spacing: -2.7px;
+      }
+
+      h1 {
+        font-size: 20px;
+        letter-spacing: -1px;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+
+      .container {
+        padding: 22px 14px 28px;
+      }
+
+      .badge {
+        font-size: 19px;
+      }
+
+      .step h3,
+      summary {
+        font-size: 18px;
+      }
+
+      details p,
+      .subtext {
+        font-size: 15px;
+      }
+
+      .cta {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      h1 {
+        font-size: 18px;
+        letter-spacing: -1px;
+      }
+
+      .brand {
+        font-size: 38px;
+      }
+
+      .container {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+  <div class="top-strip">
+    Summer ’26 Collection | Rewards Access
+  </div>
 
-<div class="logo">
-Amazon Reviewer
-</div>
+  <div class="brand-wrap">
+    <div class="brand">rhode</div>
+  </div>
 
-<div class="subtitle">
-Complete the steps below to apply for  
-<span class="highlight">Remote Amazon Product Reviewer Jobs</span>
-</div>
+  <main class="container">
 
-<div class="card">
+    <h1>Rhode Summer Collection</h1>
 
-<h3>Quick Start Guide</h3>
+    <div class="badge">Rewards Program</div>
 
-<p><span class="check">✔</span>Complete 2-3 required tasks</p>
-<p class="small">Required to unlock job listings</p>
+    <p class="subtext">
+      Access Rhode rewards and discounts during the Summer ’26 collection launch.
+    </p>
 
-<p><span class="check">✔</span>Provide a valid email</p>
-<p class="small">Used to send application updates</p>
+    <section class="step">
+      <div class="icon">1</div>
+      <div class="step-text">
+        <h3>Answer a few questions</h3>
+      </div>
+    </section>
 
-<p><span class="check">✔</span>Must be 18 years or older</p>
+    <section class="step">
+      <div class="icon">2</div>
+      <div class="step-text">
+        <h3>Enter a valid email</h3>
+      </div>
+    </section>
 
-</div>
+    <section class="step">
+      <div class="icon">3</div>
+      <div class="step-text">
+        <h3>Complete 4–6 deals</h3>
+      </div>
+    </section>
 
-<div class="card">
+    <a class="cta" href="https://linkthem.net/aff_c?offer_id=4166&aff_id=170653">
+      Get My Reward Now →
+    </a>
 
-<h3>Common Questions</h3>
+    <p class="fine-print">
+      Takes less than a minute to start.
+    </p>
 
-<p><strong>How long does it take?</strong></p>
-<p class="small">Most people finish the steps in 10-20 minutes.</p>
+    <h2>Frequently Asked Questions</h2>
 
-<p><strong>What are the tasks?</strong></p>
-<p class="small">Simple actions like surveys, app downloads, or trials.</p>
+    <details>
+      <summary>How do I get the reward?</summary>
+      <p>
+        Tap the button above, answer a few quick questions, submit your email, and complete the deals shown on the next page.
+      </p>
+    </details>
 
-</div>
+    <details>
+      <summary>How many deals do I need to do?</summary>
+      <p>
+        Most shoppers are shown 4–6 deals depending on the reward path available to them.
+      </p>
+    </details>
 
-<a class="cta" href="https://trksy.org/aff_c?offer_id=971&aff_id=170653">
-Start Application →
-</a>
+    <details>
+      <summary>When do I receive the reward?</summary>
+      <p>
+        Once your steps are completed and verified, your reward instructions will be shown based on the offer page.
+      </p>
+    </details>
 
-</div>
+    <p class="fine-print">
+      Eligibility and completion terms apply. This page is not affiliated with, endorsed by, or sponsored by Rhode.
+    </p>
+
+  </main>
 
 </body>
 </html>
