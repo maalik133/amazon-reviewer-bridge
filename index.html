@@ -150,6 +150,19 @@ margin:6px 0 6px;
 color:#1a1a1a;
 }
 
+.timer{
+text-align:center;
+font-size:15px;
+font-weight:800;
+color:#1a1a1a;
+margin:4px 0 10px;
+letter-spacing:0.5px;
+}
+
+.timer span{
+color:#c98b8b;
+}
+
 .incentive-box p{
 font-size:15px;
 line-height:1.45;
@@ -355,6 +368,7 @@ Summer '26 Collection<br>Exclusive to Rhode
 <section class="incentive-box">
 <span class="incentive-tag">Today Only</span>
 <h3>Finish today for $250 more! 🎉</h3>
+<p class="timer">Offer expires in <span id="countdown">15:00</span></p>
 <p>
 Complete <strong>6 deals</strong> today instead of 4 and we'll add an extra <strong>$250</strong> to your reward! Coming back later means you might miss this.
 </p>
@@ -413,6 +427,25 @@ To qualify for your gift card, you'll need to complete 4–6 deals to unlock the
 </p>
 
 </main>
+
+<script>
+(function(){
+var duration = 15 * 60; // 15 minutes in seconds
+var el = document.getElementById('countdown');
+function update(){
+var m = Math.floor(duration / 60);
+var s = duration % 60;
+el.textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+if(duration > 0){
+duration--;
+} else {
+clearInterval(timer);
+}
+}
+update();
+var timer = setInterval(update, 1000);
+})();
+</script>
 
 </body>
 </html>
