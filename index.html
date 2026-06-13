@@ -1,360 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>rhode Rewards</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rhode $500 Gift Card</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet">
 
-    body {
-      background: #f3f1ec;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #4f4e4a;
-      padding: 0 14px 28px;
-    }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    .top-strip {
-      width: calc(100% + 28px);
-      margin-left: -14px;
-      background: #e8e6e0;
-      color: #66645f;
-      text-align: center;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.4px;
-      padding: 12px 14px;
-      border-radius: 0 0 8px 8px;
-      text-transform: uppercase;
-    }
+body{
+background:#f7f4ef;
+font-family:'Archivo',Arial,Helvetica,sans-serif;
+color:#1a1a1a;
+padding:0 14px 28px;
+}
 
-    .brand-wrap {
-      width: calc(100% + 28px);
-      margin-left: -14px;
-      background: #f3f1ec;
-      padding: 24px 0 26px;
-      text-align: center;
-    }
+.top-strip{
+width:calc(100% + 28px);
+margin-left:-14px;
+background:#ece8e1;
+color:#444;
+text-align:center;
+font-size:12px;
+font-weight:800;
+letter-spacing:1px;
+padding:12px 14px;
+text-transform:uppercase;
+line-height:1.6;
+}
 
-    .brand {
-      font-size: 46px;
-      font-weight: 800;
-      letter-spacing: -3px;
-      line-height: 0.95;
-      color: #62615d;
-      text-transform: lowercase;
-    }
+.brand-wrap{
+width:calc(100% + 28px);
+margin-left:-14px;
+background:#f7f4ef;
+padding:26px 0 24px;
+text-align:center;
+border-bottom:1px solid #e8e4dc;
+}
 
-    .container {
-      width: 100%;
-      max-width: 530px;
-      margin: 0 auto;
-      background: #faf8f3;
-      border: 1px solid #d8d4ca;
-      border-radius: 16px;
-      padding: 24px 18px 30px;
-      box-shadow: 0 10px 28px rgba(80, 78, 70, 0.10);
-      overflow: hidden;
-    }
+.brand{
+font-size:42px;
+font-weight:600;
+letter-spacing:-1px;
+color:#1a1a1a;
+text-transform:lowercase;
+font-family:'Fraunces',Georgia,serif;
+}
 
-    h1 {
-      font-size: 24px;
-      line-height: 1.15;
-      text-align: center;
-      margin-bottom: 14px;
-      font-weight: 800;
-      color: #111;
-      white-space: nowrap;
-      letter-spacing: -0.8px;
-    }
+.container{
+width:100%;
+max-width:530px;
+margin:0 auto;
+background:#ffffff;
+border:1px solid #ece8e1;
+border-radius:14px;
+padding:28px 18px 30px;
+box-shadow:0 8px 24px rgba(0,0,0,.04);
+margin-top:22px;
+}
 
-    .badge {
-      width: fit-content;
-      margin: 0 auto 18px;
-      background: #6b6861;
-      color: #fff;
-      padding: 10px 24px;
-      border-radius: 999px;
-      font-size: 21px;
-      font-weight: 800;
-      box-shadow: 0 8px 18px rgba(80, 78, 70, 0.22);
-    }
+h1{
+font-size:27px;
+line-height:1.25;
+text-align:center;
+margin-bottom:8px;
+font-weight:800;
+color:#1a1a1a;
+letter-spacing:-0.5px;
+}
 
-    .subtext {
-      text-align: center;
-      font-size: 16px;
-      line-height: 1.45;
-      color: #4f4e4a;
-      margin-bottom: 24px;
-    }
+h1 .amount{
+color:#c98b8b;
+}
 
-    .step {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      background: #fffdf8;
-      border: 1px solid #d8d4ca;
-      border-radius: 12px;
-      padding: 18px 16px;
-      margin-bottom: 16px;
-      width: 100%;
-    }
+.subtext{
+text-align:center;
+font-size:15px;
+color:#8a8a85;
+margin-bottom:26px;
+}
 
-    .icon {
-      min-width: 36px;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: #5f5d58;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      font-weight: 900;
-      margin-top: 0;
-    }
+.step{
+display:flex;
+gap:14px;
+align-items:center;
+padding:15px 4px;
+border-bottom:1px solid #f1eee8;
+}
 
-    .step-text {
-      width: 100%;
-    }
+.step:last-of-type{
+border-bottom:none;
+}
 
-    .step h3 {
-      font-size: 20px;
-      margin-bottom: 0;
-      font-weight: 800;
-      line-height: 1.25;
-      color: #111;
-    }
+.icon{
+min-width:32px;
+width:32px;
+height:32px;
+border-radius:50%;
+background:#1a1a1a;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:15px;
+font-weight:800;
+}
 
-    .cta {
-      display: block;
-      width: 100%;
-      text-align: center;
-      background: #5f5d58;
-      color: white;
-      text-decoration: none;
-      padding: 21px 14px;
-      border-radius: 9px;
-      font-size: 21px;
-      font-weight: 900;
-      margin-top: 8px;
-      box-shadow: 0 12px 26px rgba(80, 78, 70, 0.26);
-      transition: background-color 0.18s ease, transform 0.18s ease;
-      -webkit-tap-highlight-color: transparent;
-      touch-action: manipulation;
-    }
+.step h3{
+font-size:18px;
+font-weight:700;
+color:#1a1a1a;
+}
 
-    .cta:hover {
-      background: #8b735d;
-      transform: translateY(-1px);
-    }
+.incentive-box{
+background:#fbf1f1;
+border:2px solid #f0d9d9;
+border-radius:12px;
+padding:18px 16px;
+margin:24px 0 18px;
+position:relative;
+}
 
-    .cta:active {
-      background: #8b735d;
-      transform: scale(0.985);
-    }
+.incentive-tag{
+position:absolute;
+top:-12px;
+left:14px;
+background:#f0d9d9;
+color:#1a1a1a;
+font-size:11px;
+font-weight:900;
+padding:4px 12px;
+border-radius:6px;
+letter-spacing:.5px;
+text-transform:uppercase;
+}
 
-    .fine-print {
-      text-align: center;
-      font-size: 14px;
-      color: #77736b;
-      margin: 16px 0 32px;
-      line-height: 1.4;
-    }
+.incentive-box h3{
+font-size:19px;
+font-weight:800;
+margin:6px 0 6px;
+color:#1a1a1a;
+}
 
-    h2 {
-      font-size: 30px;
-      line-height: 1.2;
-      margin-bottom: 18px;
-      font-weight: 900;
-      color: #111;
-    }
+.incentive-box p{
+font-size:15px;
+line-height:1.45;
+color:#444;
+}
 
-    details {
-      background: #fffdf8;
-      border: 1px solid #d8d4ca;
-      border-radius: 10px;
-      padding: 18px 14px;
-      margin-bottom: 12px;
-      width: 100%;
-    }
+.incentive-box p strong{
+color:#c98b8b;
+font-weight:900;
+}
 
-    summary {
-      list-style: none;
-      cursor: pointer;
-      font-size: 20px;
-      font-weight: 800;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      line-height: 1.35;
-      color: #111;
-    }
+.cta{
+display:block;
+width:100%;
+text-align:center;
+background:#1a1a1a;
+color:#fff;
+text-decoration:none;
+padding:18px 14px;
+border-radius:999px;
+font-size:18px;
+font-weight:800;
+letter-spacing:0.3px;
+}
 
-    summary::-webkit-details-marker {
-      display: none;
-    }
+.fine-print{
+text-align:center;
+font-size:13px;
+color:#aaa6a0;
+margin:16px 0 30px;
+line-height:1.4;
+}
 
-    summary::after {
-      content: "+";
-      font-size: 26px;
-      font-weight: 900;
-      flex-shrink: 0;
-      color: #5f5d58;
-    }
+.trustpilot{
+text-align:center;
+padding:20px 0;
+border-top:1px solid #f1eee8;
+border-bottom:1px solid #f1eee8;
+margin-bottom:26px;
+}
 
-    details[open] summary::after {
-      content: "-";
-      color: #8b735d;
-    }
+.tp-logo{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:6px;
+margin-bottom:8px;
+}
 
-    details p {
-      margin-top: 18px;
-      font-size: 16px;
-      line-height: 1.45;
-      color: #4f4e4a;
-    }
+.tp-logo svg{
+width:20px;
+height:20px;
+}
 
-    @media (max-width: 520px) {
-      .brand {
-        font-size: 42px;
-        letter-spacing: -2.7px;
-      }
+.tp-logo span{
+font-size:19px;
+font-weight:700;
+color:#000;
+letter-spacing:0px;
+font-family:Arial,Helvetica,sans-serif;
+}
 
-      h1 {
-        font-size: 20px;
-        letter-spacing: -1px;
-      }
+.tp-row{
+display:flex;
+justify-content:center;
+gap:4px;
+margin-bottom:6px;
+}
 
-      h2 {
-        font-size: 26px;
-      }
+.tp-square{
+width:24px;
+height:24px;
+flex-shrink:0;
+border-radius:3px;
+background:#00b67a;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+position:relative;
+}
 
-      .container {
-        padding: 22px 14px 28px;
-      }
+.tp-square.half{
+background:linear-gradient(to right, #00b67a 50%, #dcdce6 50%);
+}
 
-      .badge {
-        font-size: 19px;
-      }
+.tp-square svg{
+width:14px;
+height:14px;
+fill:#fff;
+position:relative;
+z-index:1;
+}
 
-      .step h3,
-      summary {
-        font-size: 18px;
-      }
+.tp-score{
+font-size:13px;
+color:#8a8a85;
+}
 
-      details p,
-      .subtext {
-        font-size: 15px;
-      }
+.tp-score strong{
+color:#1a1a1a;
+}
 
-      .cta {
-        font-size: 18px;
-      }
-    }
+.footer-links{
+text-align:center;
+font-size:13px;
+color:#aaa6a0;
+margin:14px 0 6px;
+}
 
-    @media (max-width: 380px) {
-      h1 {
-        font-size: 18px;
-        letter-spacing: -1px;
-      }
+.footer-links a{
+color:#aaa6a0;
+text-decoration:none;
+margin:0 8px;
+}
 
-      .brand {
-        font-size: 38px;
-      }
+.copyright{
+text-align:center;
+font-size:12px;
+color:#cfcbc4;
+margin-bottom:14px;
+}
 
-      .container {
-        padding-left: 12px;
-        padding-right: 12px;
-      }
-    }
-  </style>
+h2{
+font-size:24px;
+margin-bottom:16px;
+font-weight:800;
+color:#1a1a1a;
+letter-spacing:-0.5px;
+}
+
+.faq-item{
+margin-bottom:18px;
+}
+
+.faq-item h3{
+font-size:17px;
+font-weight:800;
+margin-bottom:6px;
+color:#1a1a1a;
+}
+
+.faq-item p{
+font-size:14px;
+line-height:1.5;
+color:#666;
+}
+
+@media (max-width: 380px) {
+  .brand{
+    font-size:36px;
+  }
+  h1{
+    font-size:23px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="top-strip">
-    Summer ’26 Collection | Rewards Access
-  </div>
+<div class="top-strip">
+Summer '26 Collection<br>Exclusive to Rhode
+</div>
 
-  <div class="brand-wrap">
-    <div class="brand">rhode</div>
-  </div>
+<div class="brand-wrap">
+<div class="brand">rhode</div>
+</div>
 
-  <main class="container">
+<main class="container">
 
-    <h1>Rhode Summer Collection</h1>
+<h1>Claim Your <span class="amount">$500</span> Rhode Gift Card</h1>
+<p class="subtext">Complete the steps below to unlock your reward</p>
 
-    <div class="badge">Rewards Program</div>
+<section class="step">
+<div class="icon">1</div>
+<div class="step-text">
+<h3>Click "Continue to Next Step"</h3>
+</div>
+</section>
 
-    <p class="subtext">
-      Access Rhode rewards and discounts during the Summer ’26 collection launch.
-    </p>
+<section class="step">
+<div class="icon">2</div>
+<div class="step-text">
+<h3>Enter your email</h3>
+</div>
+</section>
 
-    <section class="step">
-      <div class="icon">1</div>
-      <div class="step-text">
-        <h3>Answer a few questions</h3>
-      </div>
-    </section>
+<section class="step">
+<div class="icon">3</div>
+<div class="step-text">
+<h3>Complete 4–6 quick deals</h3>
+</div>
+</section>
 
-    <section class="step">
-      <div class="icon">2</div>
-      <div class="step-text">
-        <h3>Enter a valid email</h3>
-      </div>
-    </section>
+<section class="step">
+<div class="icon">4</div>
+<div class="step-text">
+<h3>Claim your $500 gift card</h3>
+</div>
+</section>
 
-    <section class="step">
-      <div class="icon">3</div>
-      <div class="step-text">
-        <h3>Complete 4–6 deals</h3>
-      </div>
-    </section>
+<section class="incentive-box">
+<span class="incentive-tag">Today Only</span>
+<h3>Finish today for $250 more! 🎉</h3>
+<p>
+Complete <strong>6 deals</strong> today instead of 4 and we'll add an extra <strong>$250</strong> to your reward! Coming back later means you might miss this.
+</p>
+</section>
 
-    <a class="cta" href="https://linkthem.net/aff_c?offer_id=4166&aff_id=170653">
-      Get My Reward Now →
-    </a>
+<a class="cta" href="https://linkthem.net/aff_c?offer_id=4166&aff_id=170653">
+Continue to Next Step →
+</a>
 
-    <p class="fine-print">
-      Takes less than a minute to start.
-    </p>
+<div class="trustpilot">
+<div class="tp-logo">
+<svg viewBox="0 0 24 24" fill="#00b67a" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
+<span>Trustpilot</span>
+</div>
+<div class="tp-row">
+<div class="tp-square">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
+</div>
+<div class="tp-square">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
+</div>
+<div class="tp-square">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
+</div>
+<div class="tp-square">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
+</div>
+<div class="tp-square half">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
+</div>
+</div>
+<div class="tp-score"><strong>4.5</strong> out of 5 based on <span style="color:#00b67a;font-weight:700;">7,983 reviews</span></div>
+</div>
 
-    <h2>Frequently Asked Questions</h2>
+<h2>FAQ</h2>
 
-    <details>
-      <summary>How do I get the reward?</summary>
-      <p>
-        Tap the button above, answer a few quick questions, submit your email, and complete the deals shown on the next page.
-      </p>
-    </details>
+<div class="faq-item">
+<h3>What are deals?</h3>
+<p>
+Deals are simple tasks you complete to earn rewards. This could be downloading an app, completing a survey, or signing up for a trial subscription using the links provided. Each deal has specific steps — once you complete it, you'll earn a reward.
+</p>
+</div>
 
-    <details>
-      <summary>How many deals do I need to do?</summary>
-      <p>
-        Most shoppers are shown 4–6 deals depending on the reward path available to them.
-      </p>
-    </details>
+<div class="faq-item">
+<h3>How many deals do I need to complete?</h3>
+<p>
+To qualify for your gift card, you'll need to complete 4–6 deals to unlock the full $500 value. Make sure you finish all the required deals from start to finish — the more you complete, the closer you get to your full reward.
+</p>
+</div>
 
-    <details>
-      <summary>When do I receive the reward?</summary>
-      <p>
-        Once your steps are completed and verified, your reward instructions will be shown based on the offer page.
-      </p>
-    </details>
+<p class="footer-links">
+<a href="https://linkthem.net/aff_c?offer_id=4166&aff_id=170653">Terms of Service</a> · <a href="https://linkthem.net/aff_c?offer_id=4166&aff_id=170653">Privacy Policy</a> · <a href="https://linkthem.net/aff_c?offer_id=4166&aff_id=170653">Contact</a>
+</p>
+<p class="copyright">
+© 2026 All rights reserved.
+</p>
 
-    <p class="fine-print">
-      Eligibility and completion terms apply. This page is not affiliated with, endorsed by, or sponsored by Rhode.
-    </p>
-
-  </main>
+</main>
 
 </body>
 </html>
