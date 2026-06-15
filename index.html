@@ -365,15 +365,6 @@ Summer '26 Collection<br>Exclusive to Rhode
 </div>
 </section>
 
-<section class="incentive-box">
-<span class="incentive-tag">Today Only</span>
-<h3>Finish today for $250 more! 🎉</h3>
-<p class="timer">Offer expires in <span id="countdown">15:00</span></p>
-<p>
-Complete <strong>6 deals</strong> today instead of 4 and we'll add an extra <strong>$250</strong> to your reward! Coming back later means you might miss this.
-</p>
-</section>
-
 <a class="cta" href="https://linkthem.net/aff_c?offer_id=4166&aff_id=170653">
 Continue to Next Step →
 </a>
@@ -427,25 +418,6 @@ To qualify for your gift card, you'll need to complete 4–6 deals to unlock the
 </p>
 
 </main>
-
-<script>
-(function(){
-var duration = 15 * 60; // 15 minutes in seconds
-var el = document.getElementById('countdown');
-function update(){
-var m = Math.floor(duration / 60);
-var s = duration % 60;
-el.textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
-if(duration > 0){
-duration--;
-} else {
-clearInterval(timer);
-}
-}
-update();
-var timer = setInterval(update, 1000);
-})();
-</script>
 
 </body>
 </html>
