@@ -1,423 +1,517 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rhode $500 Gift Card</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rhode Skin – Summer Reward</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet">
+    :root {
+      --bg:       #F0EEE9;
+      --surface:  #E8E5DF;
+      --brown:    #6B4C3B;
+      --brown-dk: #4A3028;
+      --black:    #111111;
+      --mid:      #6A6460;
+      --light:    #A09890;
+      --white:    #FFFFFF;
+      --font:     'Jost', system-ui, sans-serif;
+    }
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+    html { font-size: 16px; }
 
-body{
-background:#f7f4ef;
-font-family:'Archivo',Arial,Helvetica,sans-serif;
-color:#1a1a1a;
-padding:0 14px 28px;
-}
+    body {
+      background: var(--bg);
+      color: var(--black);
+      font-family: var(--font);
+      font-weight: 300;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
 
-.top-strip{
-width:calc(100% + 28px);
-margin-left:-14px;
-background:#ece8e1;
-color:#444;
-text-align:center;
-font-size:12px;
-font-weight:800;
-letter-spacing:1px;
-padding:12px 14px;
-text-transform:uppercase;
-line-height:1.6;
-}
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 22px 24px;
+      background: var(--bg);
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-.brand-wrap{
-width:calc(100% + 28px);
-margin-left:-14px;
-background:#f7f4ef;
-padding:26px 0 24px;
-text-align:center;
-border-bottom:1px solid #e8e4dc;
-}
+    .wordmark {
+      font-family: var(--font);
+      font-weight: 400;
+      font-size: 26px;
+      letter-spacing: 0.18em;
+      color: var(--black);
+      text-transform: lowercase;
+    }
 
-.brand{
-font-size:42px;
-font-weight:600;
-letter-spacing:-1px;
-color:#1a1a1a;
-text-transform:lowercase;
-font-family:'Fraunces',Georgia,serif;
-}
+    /* BADGE */
+    .badge-wrap {
+      display: flex;
+      justify-content: center;
+      padding: 30px 16px 0;
+    }
 
-.container{
-width:100%;
-max-width:530px;
-margin:0 auto;
-background:#ffffff;
-border:1px solid #ece8e1;
-border-radius:14px;
-padding:28px 18px 30px;
-box-shadow:0 8px 24px rgba(0,0,0,.04);
-margin-top:22px;
-}
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      border: 1px solid rgba(0,0,0,0.09);
+      border-radius: 999px;
+      padding: 6px 14px 6px 10px;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mid);
+    }
 
-h1{
-font-size:27px;
-line-height:1.25;
-text-align:center;
-margin-bottom:8px;
-font-weight:800;
-color:#1a1a1a;
-letter-spacing:-0.5px;
-}
+    .badge-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--brown);
+      flex-shrink: 0;
+    }
 
-h1 .amount{
-color:#c98b8b;
-}
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 22px 24px 0;
+      max-width: 480px;
+      margin: 0 auto;
+    }
 
-.subtext{
-text-align:center;
-font-size:15px;
-color:#8a8a85;
-margin-bottom:26px;
-}
+    .hero-headline {
+      font-weight: 300;
+      font-size: clamp(36px, 10vw, 52px);
+      line-height: 1.08;
+      color: var(--black);
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+    }
 
-.step{
-display:flex;
-gap:14px;
-align-items:center;
-padding:15px 4px;
-border-bottom:1px solid #f1eee8;
-}
+    .hero-headline strong {
+      font-weight: 600;
+      display: block;
+    }
 
-.step:last-of-type{
-border-bottom:none;
-}
+    .hero-sub {
+      font-size: 13px;
+      color: var(--mid);
+      line-height: 1.6;
+      font-weight: 300;
+      max-width: 300px;
+      margin: 0 auto;
+      letter-spacing: 0.01em;
+    }
 
-.icon{
-min-width:32px;
-width:32px;
-height:32px;
-border-radius:50%;
-background:#1a1a1a;
-color:#fff;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:15px;
-font-weight:800;
-}
+    /* GIFT CARD */
+    .card-wrap {
+      padding: 30px 20px 0;
+      max-width: 480px;
+      margin: 0 auto;
+    }
 
-.step h3{
-font-size:18px;
-font-weight:700;
-color:#1a1a1a;
-}
+    .gift-card {
+      background: linear-gradient(140deg, #7A5544 0%, #4E3025 55%, #3A2218 100%);
+      border-radius: 18px;
+      padding: 26px 26px 22px;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
 
-.incentive-box{
-background:#fbf1f1;
-border:2px solid #f0d9d9;
-border-radius:12px;
-padding:18px 16px;
-margin:24px 0 18px;
-position:relative;
-}
+    .gift-card::before {
+      content: '';
+      position: absolute;
+      top: -50px; right: -50px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      pointer-events: none;
+    }
 
-.incentive-tag{
-position:absolute;
-top:-12px;
-left:14px;
-background:#f0d9d9;
-color:#1a1a1a;
-font-size:11px;
-font-weight:900;
-padding:4px 12px;
-border-radius:6px;
-letter-spacing:.5px;
-text-transform:uppercase;
-}
+    .gc-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 28px;
+    }
 
-.incentive-box h3{
-font-size:19px;
-font-weight:800;
-margin:6px 0 6px;
-color:#1a1a1a;
-}
+    .gc-brand {
+      font-family: var(--font);
+      font-weight: 400;
+      font-size: 18px;
+      letter-spacing: 0.20em;
+      text-transform: lowercase;
+      opacity: 0.85;
+    }
 
-.timer{
-text-align:center;
-font-size:15px;
-font-weight:800;
-color:#1a1a1a;
-margin:4px 0 10px;
-letter-spacing:0.5px;
-}
+    .gc-pill {
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.45;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 999px;
+      padding: 3px 10px;
+      font-weight: 400;
+    }
 
-.timer span{
-color:#c98b8b;
-}
+    .gc-value-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
 
-.incentive-box p{
-font-size:15px;
-line-height:1.45;
-color:#444;
-}
+    .gc-value {
+      font-weight: 300;
+      font-size: clamp(52px, 13vw, 64px);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
 
-.incentive-box p strong{
-color:#c98b8b;
-font-weight:900;
-}
+    .gc-value-label {
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.45;
+      padding-bottom: 8px;
+      font-weight: 400;
+    }
 
-.cta{
-display:block;
-width:100%;
-text-align:center;
-background:#1a1a1a;
-color:#fff;
-text-decoration:none;
-padding:18px 14px;
-border-radius:999px;
-font-size:18px;
-font-weight:800;
-letter-spacing:0.3px;
-}
+    .card-caption {
+      text-align: center;
+      padding: 12px 0 0;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--light);
+      font-weight: 400;
+    }
 
-.fine-print{
-text-align:center;
-font-size:13px;
-color:#aaa6a0;
-margin:16px 0 30px;
-line-height:1.4;
-}
+    /* STEPS */
+    .steps-section {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 30px 20px 0;
+    }
 
-.trustpilot{
-text-align:center;
-padding:20px 0;
-border-top:1px solid #f1eee8;
-border-bottom:1px solid #f1eee8;
-margin-bottom:26px;
-}
+    .steps-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--light);
+      font-weight: 500;
+      margin-bottom: 12px;
+      text-align: center;
+    }
 
-.tp-logo{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:6px;
-margin-bottom:8px;
-}
+    .steps { display: flex; flex-direction: column; gap: 2px; }
 
-.tp-logo svg{
-width:20px;
-height:20px;
-}
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--surface);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
 
-.tp-logo span{
-font-size:19px;
-font-weight:700;
-color:#000;
-letter-spacing:0px;
-font-family:Arial,Helvetica,sans-serif;
-}
+    .step-num {
+      min-width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1px solid rgba(107,76,59,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--brown);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
 
-.tp-row{
-display:flex;
-justify-content:center;
-gap:4px;
-margin-bottom:6px;
-}
+    .step-text {
+      font-size: 13.5px;
+      color: var(--black);
+      font-weight: 400;
+      line-height: 1.45;
+      letter-spacing: 0.01em;
+    }
 
-.tp-square{
-width:24px;
-height:24px;
-flex-shrink:0;
-border-radius:3px;
-background:#00b67a;
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:hidden;
-position:relative;
-}
+    /* CTA */
+    .cta-wrap {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 26px 20px 0;
+    }
 
-.tp-square.half{
-background:linear-gradient(to right, #00b67a 50%, #dcdce6 50%);
-}
+    .cta-btn {
+      display: block;
+      width: 100%;
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+      font-family: var(--font);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 18px 24px;
+      border-radius: 999px;
+      transition: opacity 0.2s;
+    }
 
-.tp-square svg{
-width:14px;
-height:14px;
-fill:#fff;
-position:relative;
-z-index:1;
-}
+    .cta-btn:hover { opacity: 0.78; }
 
-.tp-score{
-font-size:13px;
-color:#8a8a85;
-}
+    .cta-note {
+      text-align: center;
+      font-size: 10.5px;
+      color: var(--light);
+      margin-top: 10px;
+      line-height: 1.55;
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
 
-.tp-score strong{
-color:#1a1a1a;
-}
+    /* TRUSTPILOT */
+    .trust-strip {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 26px 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
 
-.footer-links{
-text-align:center;
-font-size:13px;
-color:#aaa6a0;
-margin:14px 0 6px;
-}
+    .tp-logo { font-size: 12px; font-weight: 400; color: var(--mid); letter-spacing: 0.04em; }
+    .tp-stars { display: flex; gap: 2px; }
 
-.footer-links a{
-color:#aaa6a0;
-text-decoration:none;
-margin:0 8px;
-}
+    .star {
+      width: 17px; height: 17px;
+      background: #00B67A;
+      border-radius: 2px;
+      display: flex; align-items: center; justify-content: center;
+    }
 
-.copyright{
-text-align:center;
-font-size:12px;
-color:#cfcbc4;
-margin-bottom:14px;
-}
+    .star svg { width: 10px; height: 10px; fill: white; }
+    .tp-score { font-size: 12px; color: var(--mid); font-weight: 400; }
 
-h2{
-font-size:24px;
-margin-bottom:16px;
-font-weight:800;
-color:#1a1a1a;
-letter-spacing:-0.5px;
-}
+    /* DIVIDER */
+    .divider {
+      max-width: 440px;
+      margin: 28px auto 0;
+      height: 1px;
+      background: rgba(0,0,0,0.07);
+    }
 
-.faq-item{
-margin-bottom:18px;
-}
+    /* FAQ */
+    .faq-section {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 26px 20px 0;
+    }
 
-.faq-item h3{
-font-size:17px;
-font-weight:800;
-margin-bottom:6px;
-color:#1a1a1a;
-}
+    .faq-title {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--light);
+      font-weight: 500;
+      margin-bottom: 14px;
+      text-align: center;
+    }
 
-.faq-item p{
-font-size:14px;
-line-height:1.5;
-color:#666;
-}
+    .faq-item { border-bottom: 1px solid rgba(0,0,0,0.07); padding: 15px 0; }
 
-@media (max-width: 380px) {
-  .brand{
-    font-size:36px;
-  }
-  h1{
-    font-size:23px;
-  }
-}
-</style>
+    .faq-q {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--black);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+      letter-spacing: 0.01em;
+    }
+
+    .faq-chevron {
+      width: 15px; height: 15px;
+      flex-shrink: 0;
+      color: var(--light);
+      transition: transform 0.22s;
+    }
+
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+    .faq-a {
+      font-size: 13px;
+      color: var(--mid);
+      line-height: 1.62;
+      font-weight: 300;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.28s ease, padding-top 0.2s;
+      letter-spacing: 0.01em;
+    }
+
+    .faq-item.open .faq-a { max-height: 160px; padding-top: 10px; }
+
+    /* FOOTER */
+    footer {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 30px 20px 44px;
+      text-align: center;
+    }
+
+    .footer-legal {
+      font-size: 10px;
+      color: var(--light);
+      line-height: 1.7;
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
+
+    .footer-legal a { color: var(--light); text-decoration: underline; text-underline-offset: 2px; }
+  </style>
 </head>
-
 <body>
 
-<div class="top-strip">
-Summer '26 Collection<br>Exclusive to Rhode
-</div>
+  <nav>
+    <span class="wordmark">rhode</span>
+  </nav>
 
-<div class="brand-wrap">
-<div class="brand">rhode</div>
-</div>
+  <div class="badge-wrap">
+    <span class="badge">
+      <span class="badge-dot"></span>
+      Summer Reward Program
+    </span>
+  </div>
 
-<main class="container">
+  <div class="hero">
+    <h1 class="hero-headline">
+      Claim Your<br />
+      <strong>$500 Rhode<br />Gift Card</strong>
+    </h1>
+    <p class="hero-sub">Follow the steps below to unlock your exclusive summer reward.</p>
+  </div>
 
-<h1>Claim Your <span class="amount">$500</span> Rhode Gift Card</h1>
-<p class="subtext">Complete the steps below to unlock your reward</p>
+  <div class="card-wrap">
+    <div class="gift-card">
+      <div class="gc-top">
+        <div class="gc-brand">rhode skin</div>
+        <div class="gc-pill">Gift Card</div>
+      </div>
+      <div class="gc-value-row">
+        <div class="gc-value">$500</div>
+        <div class="gc-value-label">Total Value</div>
+      </div>
+    </div>
+    <div class="card-caption">Summer '26 &nbsp;·&nbsp; Limited Availability</div>
+  </div>
 
-<section class="step">
-<div class="icon">1</div>
-<div class="step-text">
-<h3>Click "Continue to Next Step"</h3>
-</div>
-</section>
+  <div class="steps-section">
+    <div class="steps-label">How to claim</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">Click "Claim My Gift Card" below</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">Enter your basic info</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">Complete 4–6 deals</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text">Receive your Rhode gift card</div>
+      </div>
+    </div>
+  </div>
 
-<section class="step">
-<div class="icon">2</div>
-<div class="step-text">
-<h3>Enter your email</h3>
-</div>
-</section>
+  <div class="cta-wrap">
+    <a href="https://linkthem.net/aff_c?offer_id=4166&aff_id=170653&source=Rhodetest1" class="cta-btn">
+      Claim My $500 Gift Card &rarr;
+    </a>
+    <p class="cta-note">By clicking you agree to complete the required steps to access your offer. No purchase necessary.</p>
+  </div>
 
-<section class="step">
-<div class="icon">3</div>
-<div class="step-text">
-<h3>Complete 4–6 quick deals</h3>
-</div>
-</section>
+  <div class="trust-strip">
+    <span class="tp-logo">Trustpilot</span>
+    <div class="tp-stars">
+      <span class="star"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+      <span class="star"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+      <span class="star"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+      <span class="star"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+      <span class="star"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+    </div>
+    <span class="tp-score">4.7 / 5</span>
+  </div>
 
-<section class="step">
-<div class="icon">4</div>
-<div class="step-text">
-<h3>Claim your $500 gift card</h3>
-</div>
-</section>
+  <div class="divider"></div>
 
-<a class="cta" href="https://linkthem.net/aff_c?offer_id=4166&aff_id=170653">
-Continue to Next Step →
-</a>
+  <div class="faq-section">
+    <div class="faq-title">Questions</div>
 
-<div class="trustpilot">
-<div class="tp-logo">
-<svg viewBox="0 0 24 24" fill="#00b67a" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
-<span>Trustpilot</span>
-</div>
-<div class="tp-row">
-<div class="tp-square">
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
-</div>
-<div class="tp-square">
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
-</div>
-<div class="tp-square">
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
-</div>
-<div class="tp-square">
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
-</div>
-<div class="tp-square half">
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
-</div>
-</div>
-<div class="tp-score"><strong>4.5</strong> out of 5 based on <span style="color:#00b67a;font-weight:700;">7,983 reviews</span></div>
-</div>
+    <div class="faq-item">
+      <div class="faq-q">
+        What are the deals?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="faq-a">The deals are offers from brand partners — things like trials, subscriptions, or surveys. Most people complete 4–6. The more you complete, the better your reward.</div>
+    </div>
 
-<h2>FAQ</h2>
+    <div class="faq-item">
+      <div class="faq-q">
+        Is there a cost to participate?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="faq-a">No purchase is necessary. Some deals may have their own terms — review each one before completing.</div>
+    </div>
 
-<div class="faq-item">
-<h3>What are deals?</h3>
-<p>
-Deals are simple tasks you complete to earn rewards. This could be downloading an app, completing a survey, or signing up for a trial subscription using the links provided. Each deal has specific steps — once you complete it, you'll earn a reward.
-</p>
-</div>
 
-<div class="faq-item">
-<h3>How many deals do I need to complete?</h3>
-<p>
-To qualify for your gift card, you'll need to complete 4–6 deals to unlock the full $500 value. Make sure you finish all the required deals from start to finish — the more you complete, the closer you get to your full reward.
-</p>
-</div>
 
-<p class="footer-links">
-<a href="https://linkthem.net/aff_c?offer_id=4166&aff_id=170653">Terms of Service</a> · <a href="https://linkthem.net/aff_c?offer_id=4166&aff_id=170653">Privacy Policy</a> · <a href="https://linkthem.net/aff_c?offer_id=4166&aff_id=170653">Contact</a>
-</p>
-<p class="copyright">
-© 2026 All rights reserved.
-</p>
+  </div>
 
-</main>
+  <footer>
+    <p class="footer-legal">
+      Promotional offer. Participation requires completing sponsored deals.<br />
+      <a href="#">Terms</a> &nbsp;&middot;&nbsp; <a href="#">Privacy</a><br />
+      Not affiliated with Rhode Skin. &copy; 2026 Reward Promotions.
+    </p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.closest('.faq-item');
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+  </script>
 
 </body>
 </html>
